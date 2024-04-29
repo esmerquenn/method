@@ -45,7 +45,6 @@ nav {
   display: none;
 }
 
-
 .menu {
   font-size: 1.4rem;
   width: 81%;
@@ -77,9 +76,13 @@ nav {
   width: 40%;
 }
 
-.main_img:hover, .main_img_vertical:hover {
-    filter: grayscale(0);
-  }
+.main_img:hover,
+.main_img_vertical:hover {
+  filter: grayscale(0);
+}
+.grayscale {
+  filter: grayscale(2) !important;
+}
 .main-width_veritical {
   display: flex;
   gap: 10px;
@@ -163,10 +166,11 @@ h2 {
   }
   .blur_div {
     background: #33333361;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
+    height: 100%;
     z-index: 1;
     transition: 0.2s;
   }
@@ -176,7 +180,8 @@ h2 {
   .cover {
     right: 0;
   }
-  .main-width, .main-width_veritical  {
+  .main-width,
+  .main-width_veritical {
     width: calc(100% - 60px);
     padding-inline: 5px;
   }
@@ -191,11 +196,15 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
-  .main_img_vertical {width: 90%;}
+  .main_img_vertical {
+    width: 90%;
+  }
 }
 @media only screen and (max-width: 540px) {
   .container {
     width: 97%;
   }
-  .main_img_vertical {width: 100%;}
+  .main_img_vertical {
+    width: 100%;
+  }
 }

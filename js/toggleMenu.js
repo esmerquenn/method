@@ -1,11 +1,12 @@
 const nav = document.querySelector("nav")
 const main = document.querySelector("main")
 const blur_div = document.querySelector(".blur_div")
-
+const images = document.querySelectorAll('.main_img, .main_img_vertical');
 function toggle(){
    nav.classList.toggle("active") 
    main.classList.toggle("blur")
    blur_div.classList.toggle("cover")
+   images.forEach(img=>img.classList.toggle('grayscale'))
 }
 
 document.addEventListener('scroll', function() {
@@ -16,7 +17,6 @@ document.addEventListener('scroll', function() {
  });
  
  const debounceScrollFunction = debounce(function() {
-   const images = document.querySelectorAll('.main_img, .main_img_vertical');
    let closest = null;
    let closestDist = Infinity;
  
@@ -65,8 +65,7 @@ document.addEventListener('scroll', function() {
      if (callNow) func.apply(context, args);
    };
  }
- 
-// document.addEventListener('scroll', debounce(function() {
+//  document.addEventListener('scroll', function() {
 //    const images = document.querySelectorAll('.main_img, .main_img_vertical');
 //    let closest = null;
 //    let closestDist = Infinity;
@@ -90,30 +89,5 @@ document.addEventListener('scroll', function() {
 //        img.style.filter = 'grayscale(2)';
 //      }
 //    });
- 
-//    if (closest) {
-//      const elementRect = closest.getBoundingClientRect();
-//      const absoluteElementTop = elementRect.top + window.pageYOffset;
-//      const middle = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
-//      window.scrollTo({
-//        top: middle,
-//        behavior: 'smooth'
-//      });
-//    }
-//  }, 100));
- 
-//  function debounce(func, wait, immediate) {
-//    var timeout;
-//    return function() {
-//      var context = this, args = arguments;
-//      var later = function() {
-//        timeout = null;
-//        if (!immediate) func.apply(context, args);
-//      };
-//      var callNow = immediate && !timeout;
-//      clearTimeout(timeout);
-//      timeout = setTimeout(later, wait);
-//      if (callNow) func.apply(context, args);
-//    };
-//  }
+//  });
  
