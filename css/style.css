@@ -1,6 +1,6 @@
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 body {
   background: #3c3c3c;
 }
@@ -61,11 +61,13 @@ nav {
     gap: 5px;
   }
 }
+/* main container starts */
 .main-width,
-.main-width_veritical {
+.main-width_veritical,
+.slider_div, footer {
   margin-left: auto;
   margin-block: 7vh;
-  width: 75%;
+  width: 72%;
 }
 .main_img,
 .main_img_vertical {
@@ -90,7 +92,54 @@ nav {
   display: flex;
   gap: 10px;
 }
+/*  slider  starts */
 
+.owl-carousel {
+  padding: 10px;
+}
+.card {
+  padding-block: 40%;
+  display: grid;
+  place-items: center;
+  border-block: 1px solid #ffffff41;
+  border-left: 1px solid #ffffff41;
+  position: relative;
+}
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 2.7px;
+  height: 2.7px;
+  background: #ebebeb;
+  box-shadow: 0 0 5px #e5e5e5;
+}
+
+.card::before {
+  top: -1px; /* yarısı dışarıda kalacak şekilde */
+  left: -1.5px;
+}
+
+.card::after {
+  bottom: -1px;
+  right: -2px;
+}
+
+.owl-item img {
+  width: 70% !important;
+}
+.owl-nav,
+.owl-dots {
+  display: none !important;
+}
+/*  slider  ends */
+footer{  display: flex;justify-content: center;padding: 60px;}
+.icons{
+& img{
+  width: 30px;
+}
+}
 /* headings start */
 
 h2 {
@@ -101,6 +150,8 @@ h2 {
 }
 /* headings end */
 @media only screen and (max-width: 992px) {
+  /* .card {
+    padding-block: 30%;} */
 }
 @media only screen and (max-width: 768px) {
   .logos {
@@ -125,11 +176,40 @@ h2 {
   }
   nav {
     background: #3c3c3c;
-    box-shadow: 0 0 6px #333;
+    box-shadow: 0 0 2px #333;
     left: 0;
     width: 60px;
     z-index: 3;
   }
+  .active{box-shadow: 0 0 1px #e5e5e5;}
+  .active::before,
+  .active::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 2.8px;
+    height: 2.8px;
+    background: #ebebeb;
+    box-shadow: 0 0 5px #e5e5e5;
+  }
+  
+  .active::before {
+    top: 0; /* yarısı dışarıda kalacak şekilde */
+    right: -2px;
+  }
+  
+  .active::after {
+    bottom: 0;
+    right: -2px;
+  }
+
+
+
+
+
+
+
+
   .nav_menu {
     padding: 10px;
   }
@@ -184,13 +264,11 @@ h2 {
     right: 0;
   }
   .main-width,
-  .main-width_veritical {
+  .main-width_veritical, .slider_div {
     width: calc(100% - 60px);
     padding-inline: 5px;
   }
-  h2 {
-    font-size: 1.5rem;
-  }
+ 
   p {
     font-size: 1rem;
   }
@@ -202,6 +280,11 @@ h2 {
   .main_img_vertical {
     width: 90%;
   }
+  /* heading starts */
+  h2 {
+    font-size: 1.5rem;
+  }
+  /* heading ends */
 }
 @media only screen and (max-width: 540px) {
   .container {
