@@ -6,14 +6,32 @@
     <title>method</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/font.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Tam ekran video arka planı için CSS */
+      .video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100vh; /* Tam ekran olması için */
+        z-index: -1; /* İçeriklerin altında olması için */
+      }
+    
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+    
+      .content {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8); /* İçerik kısmı için hafif şeffaf arka plan */
+        margin-top: 100vh; /* Video altında başlayacak içerik */
+      }
+    </style>
   </head>
   <body>
     <header class="container">
@@ -39,45 +57,14 @@
     <main class="container">
    
     
-      <div class="gezegen"  ><img src="img/gezegen.gif" alt=""></div>
+     <!-- <video src="img/gezegen.mp4"></video> -->
+     <video autoplay loop muted class="video-background">
+      <source src="img/gezegen.mp4" type="video/mp4">
+      Tarayıcınız video tagını desteklemiyor.
+    </video>
     </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+   
     <script src="js/toggleMenu.js"></script>
-    <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        margin: 0,
-        nav: true,
-        responsive: {
-          0: {
-            items: 2.02,
-          },
-
-          600: {
-            items: 3.01,
-          },
-          800: {
-            items: 3.01,
-          },
-          1000: {
-            items: 4.01,
-          },
-        },
-      });
-    </script>
+    
   </body>
 </html>
