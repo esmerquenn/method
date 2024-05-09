@@ -17,3 +17,8 @@ body { line-height: 1 }
 ul { list-style: none }
 a { text-decoration: none;}
 table { border-collapse: collapse; border-spacing: 0 }
+input, button{
+	border: none;
+	outline: none;
+	background: none;
+}
