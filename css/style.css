@@ -65,14 +65,16 @@ nav {
 .main-width,
 .main-width_veritical,
 .slider_div,
-.foot_div {
+.foot_div,
+.main-width_horizontal {
   margin-left: auto;
   margin-block: 7vh;
   width: 72%;
 }
 
 .main_img,
-.main_img_vertical {
+.main_img_vertical,
+.main_img_horizontal {
   filter: grayscale(100%);
   transition: 0.2s ease-in-out;
 }
@@ -84,8 +86,19 @@ nav {
 }
 
 .main_img:hover,
+.main_img_horizontal:hover,
 .main_img_vertical:hover {
   filter: grayscale(0);
+}
+
+.main_img_horizontal::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(139, 139, 139, 0.451);
 }
 .grayscale {
   filter: grayscale(2) !important;
@@ -94,6 +107,52 @@ nav {
   display: flex;
   gap: 10px;
 }
+/* about starts */
+.main_img_horizontal {
+  width: 100%;
+  position: relative;
+  & img {
+    width: 100%;
+  }
+}
+.main-width_horizontal {
+  padding: 20px;
+  /* height: 100vh; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fdfdfd;
+}
+.name_div {
+  border-top: 3px solid #5b5b5b;
+  position: relative;
+}
+.name {
+  position: absolute;
+  top: 50%;
+  left: 97.2%;
+  transform: translateY(-50%);
+  text-shadow: 0 0 #333;
+  color: #000;
+  font-size: 3rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.name span {
+  display: block;
+  font-family: monospace;
+}
+.about_paragraf {
+  grid-column: 2;
+  padding-block: 10px;
+}
+.about_paragraf p {
+  color: #333;
+  font-size: 0.8rem;
+}
+/* about ends */
+
 /*  slider  starts */
 
 .owl-carousel {
@@ -160,6 +219,9 @@ h2 {
   font-size: 2rem;
   margin-block: 20px;
 }
+h3 {
+  font-size: 4rem;
+}
 /* headings end */
 
 /* contact start */
@@ -221,14 +283,12 @@ input:focus {
   width: 80%;
   text-align: left;
 }
-i{
+i {
   font-size: 1.1rem;
 }
 
 /* contact end */
 @media only screen and (max-width: 992px) {
-  /* .card {
-    padding-block: 30%;} */
 }
 @media only screen and (max-width: 768px) {
   .logos {
@@ -334,7 +394,8 @@ i{
   .main-width,
   .main-width_veritical,
   .slider_div,
-  .foot_div {
+  .foot_div,
+  .main-width_horizontal {
     width: calc(100% - 60px);
     padding-inline: 5px;
   }
@@ -353,13 +414,29 @@ i{
   h2 {
     font-size: 1.5rem;
   }
+  h3{font-size: 3rem;}
   .foot_div {
     margin-block: 10px;
   }
   .contact_button {
- 
     width: 100%;
   }
+
+  /* about starts */
+  .main_img_horizontal {
+    width: 100%;
+  }
+  .main-width_horizontal {
+    padding: 10px;
+  }
+  .name {
+    left: 97.2%;
+    font-size: 2.3rem;
+  }
+  .about_paragraf p {
+    font-size: 0.8rem;
+  }
+  /* about ends */
 }
 @media only screen and (max-width: 540px) {
   .container {
@@ -379,4 +456,25 @@ i{
     gap: 20px 10px;
     grid-template-columns: 1fr;
   }
+
+  /* about starts */
+
+.main-width_horizontal {
+  padding: 5px;
+  grid-template-columns: 1fr;
+  place-items:  center end;
+}
+.main_img_horizontal{
+  width: 90%;
+}
+.name {
+  left: 0;
+  font-size: 2rem;
+}
+.about_paragraf{
+  text-align: right;
+}
+h3{font-size: 2rem;}
+
+/* about ends */
 }

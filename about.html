@@ -28,7 +28,7 @@
               <li><img class="menu_icon" src="img/pinterest.png" alt="" /> <a href="main.html">Design Portfolio</a></li>
               <li><img class="menu_icon" src="img/pinterest.png" alt="" /><a href="#">Repair and Constraction</a></li>
               <li><img class="menu_icon" src="img/pinterest.png" alt="" /><a href="#">Investment Projects</a></li>
-              <li><img class="menu_icon" src="img/pinterest.png" alt="" /><a href="about.html">About Us</a></li>
+              <li><img class="menu_icon" src="img/pinterest.png" alt="" /><a href="#">About Us</a></li>
               <li><img class="menu_icon" src="img/pinterest.png" alt="" /><a href="contact.html">Contact</a></li>
             </ul>
           </div>
@@ -39,7 +39,7 @@
     <main class="container">
       <section>
         <article class="main-width">
-          <img class="main_img" src="img/25.jpg" alt="" />
+          <img class="main_img" src="img/58.jpg" alt="" />
           <div class="main_paragraf">
             <h2>post 6 başlıq</h2>
             <p>
@@ -49,8 +49,22 @@
             </p>
           </div>
         </article>
+        <article class="main-width_horizontal">
+          <div class="name_div">
+            <div class="name"></div>
+          </div>
+          <div class="main_img_horizontal"> <img  src="img/kamran.jpg" alt="" /></div>
+          <div class="about_paragraf">
+            <h3>Kamran Abdullahov</h3>
+            <p>
+              Nümunə mətn. Mətn qutusunu seçmək üçün klikləyin. Mətni redaktə etməyə başlamaq üçün yenidən və ya iki dəfə
+              klikləyin. Nümunə mətn. Mətn qutusunu seçmək üçün klikləyin. Mətni redaktə etməyə başlamaq üçün yenidən və ya iki
+              dəfə klikləyin.
+            </p>
+          </div>
+        </article>
 
-        <article class="main-width_veritical">
+        <!-- <article class="main-width_veritical">
           <img class="main_img_vertical" src="img/96.jpg" alt="" />
           <div class="main_paragraf">
             <h2>post 7 başlıq</h2>
@@ -71,52 +85,10 @@
               dəfə klikləyin.
             </p>
           </div>
-        </article>
-      </section>
-
-      <section class="slider_div">
-        <div class="slider">
-          <div class="owl-carousel owl-theme">
-            <div class="item">
-              <div class="card">
-                <img src="img/MethGdd.png" alt="" />
-              </div>
-              <div class="line"></div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <img src="img/MethGdd.png" alt="" />
-              </div>
-              <div class="line"></div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <img src="img/MethGdd.png" alt="" />
-              </div>
-              <div class="line"></div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <img src="img/MethGdd.png" alt="" />
-              </div>
-              <div class="line"></div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <img src="img/MethGdd.png" alt="" />
-              </div>
-              <div class="line"></div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <img src="img/MethGdd.png" alt="" />
-              </div>
-              <div class="line"></div>
-            </div>
-          </div>
-        </div>
+        </article> -->
       </section>
     </main>
+
     <footer class="container">
       <div class="foot_div">
         <div class="foot">
@@ -130,43 +102,16 @@
         </div>
       </div>
     </footer>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="js/toggleMenu.js"></script>
     <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        margin: 0,
-        nav: true,
-        responsive: {
-          0: {
-            items: 2.02,
-          },
-
-          600: {
-            items: 3.01,
-          },
-          800: {
-            items: 3.01,
-          },
-          1000: {
-            items: 4.01,
-          },
-        },
+      const h2 = document.querySelector(".name");
+      let ad = 'Kamran'
+      
+      ad.split('').forEach((char) => {
+        h2.innerHTML += `<span>${char}</span>`
       });
+      console.log(h2);
+      
     </script>
   </body>
 </html>
