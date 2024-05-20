@@ -13,15 +13,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cht.css" />
   </head>
   <body>
     <header class="container">
-      <nav onclick="toggle()">
+      <nav id="navbar" onclick="toggle()">
         <div  class="nav_menu">
           <div class="logos">
             <a class="logo" href="/"><img src="img/MethGdd.png" alt="" /></a>
-            <a class="logo_mobile" href="/"><img src="img/İCON/hamburger.png" alt="" /></a>
+            <a class="logo_mobile" href="#"><img src="img/İCON/hamburger.png" alt="" /></a>
           </div>
           <div class="menu-div">
             <ul class="menu">
@@ -74,7 +74,7 @@
         </article>
       </section>
 
-      <section class="slider_div">
+      <section id="carousel" class="slider_div">
         <div class="slider">
           <div class="owl-carousel owl-theme">
             <div class="item">
@@ -125,6 +125,8 @@
             <img src="img/instagram.png" alt="" />
             <img src="img/facebook.png" alt="" />
             <img src="img/phone.png" alt="" />
+            <img src="img/pinterest.png" alt="">
+            <img src="img/pinterest.png" alt="">
           </div>
           <a href="mailto:methGdd@gmail.com">MethGdd@gmail.com</a>
         </div>
@@ -143,30 +145,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="js/toggleMenu.js"></script>
-    <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        margin: 0,
-        nav: true,
-        responsive: {
-          0: {
-            items: 2.02,
-          },
-
-          600: {
-            items: 3.01,
-          },
-          800: {
-            items: 3.01,
-          },
-          1000: {
-            items: 4.01,
-          },
-        },
-      });
-    </script>
+    <script src="js/grayscale.js"></script>
+    <script src="js/owl.js"></script>
   </body>
 </html>
