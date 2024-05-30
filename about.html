@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="container">
+    <div class="container flex_container">
         <nav onclick="toggle()">
           <div  class="nav_menu">
             <div class="logos">
@@ -34,9 +34,9 @@
             </div>
           </div>
         </nav>
-      </header>
+
     <div onclick="toggle()" class="blur_div"></div>
-    <main class="container">
+    <main >
       <section>
         <article class="main-width">
           <img class="main_img" src="img/58.jpg" alt="" />
@@ -51,24 +51,22 @@
         </article>
         <article class="main-width_horizontal">
           <div class="name_div">
-            <h4>Memar</h4>
-            <p><span>01/04/2000</span> <span>work since 2023</span></p>
-            <div class="name">
+            <div>
+              <h4>Professional Memar</h4>
+              <h6>Landscape architecture</h6>
             </div>
+            <p><span>01/04/2000</span> </p>
+           
           </div>
           <div class="main_img_horizontal"> <img  src="img/kamran.jpg" alt="" /></div>
           <div class="about_paragraf">
             <h3>Kamran Abdullahov</h3>
-            <p>
-              Nümunə mətn. Mətn qutusunu seçmək üçün klikləyin. Mətni redaktə etməyə başlamaq üçün yenidən və ya iki dəfə
-              klikləyin. Nümunə mətn. Mətn qutusunu seçmək üçün klikləyin. Mətni redaktə etməyə başlamaq üçün yenidən və ya iki
-              dəfə klikləyin.
-            </p>
+           
           </div>
         </article>
       </section>
     </main>
-
+  </div>
     <footer class="container">
       <div class="foot_div">
         <div class="foot">
@@ -84,15 +82,5 @@
     </footer>
     <script src="js/toggleMenu.js"></script>
     <script src="js/grayscale.js"></script>
-    <script>
-      const h2 = document.querySelector(".name");
-      let ad = 'Kamran'
-      
-      ad.split('').forEach((char) => {
-        h2.innerHTML += `<span>${char}</span>`
-      });
-      console.log(h2);
-      
-    </script>
   </body>
 </html>

@@ -7,17 +7,17 @@ $(".owl-carousel").owlCarousel({
     nav: true,
     responsive: {
       0: {
-        items: 3.02,
+        items: 4.005,
       },
 
       600: {
-        items: 4.01,
+        items: 4.005,
       },
       800: {
-        items: 5.01,
+        items: 5.005,
       },
       1000: {
-        items: 6.01,
+        items: 6.005,
       },
     },
   });
