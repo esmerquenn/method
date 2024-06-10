@@ -2,16 +2,19 @@ const nav = document.querySelector("nav");
 const main = document.querySelector("main");
 const blur_div = document.querySelector(".blur_div");
 const images = document.querySelectorAll(".main_img, .main_img_vertical");
-
+const lang = document.querySelector(".lang")
 function toggle() {
   nav.classList.toggle("active");
   if (nav.classList.contains("active")) {
+    lang.classList.add("langing")
     nav.style.position = "fixed";
     main.style.marginLeft = "auto";
     main.classList.add("blur");
     blur_div.classList.add("cover");
     images.forEach((img) => img.classList.add("grayscale"));
   } else {
+    lang.classList.remove("langing")
+
     main.classList.remove("blur");
     blur_div.classList.remove("cover");
     images.forEach((img) => img.classList.remove("grayscale"));
