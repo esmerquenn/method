@@ -58,7 +58,6 @@ nav {
   right: 100%;
 }
 
-
 .nav_menu {
   height: 100%;
   width: 100%;
@@ -92,7 +91,9 @@ nav {
   }
 }
 /* main container starts */
-article{margin-bottom: 60px;}
+article {
+  margin-bottom: 60px;
+}
 main {
   margin-block: 7vh;
   width: 72%;
@@ -111,7 +112,6 @@ main {
   width: 40%;
   /* height: 350px;
   object-fit: cover; */
-
 }
 
 .main_img:hover,
@@ -243,7 +243,7 @@ h4 {
   padding: 10px 0 0 5px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-h6{
+h6 {
   font-size: 1rem;
   padding: 5px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -314,32 +314,34 @@ input:focus {
 }
 
 /* contact end */
-.contact_main{
+.contact_main {
   height: 70%;
 }
-.contact_page{
-max-height: 100vh ;
-overflow-y: hidden;
+.contact_page {
+  /* max-height: 100vh ; */
+  /* overflow-y: hidden; */
 
-  footer{
+  footer {
     position: fixed;
     bottom: 0;
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 25vh;
     right: 0;
+    left: 0;
   }
 }
 @media only screen and (max-width: 992px) {
 }
 @media only screen and (max-width: 768px) {
-  /* .contact_main{margin: 10px;} */
-  .contact_page{
-    .main-width,  .form_width{
+  .contact_page {
+    .main-width,
+    .form_width {
       margin: 0;
-    }}
+    }
+  }
   .logos {
     display: flex;
     align-items: center;
@@ -360,7 +362,9 @@ overflow-y: hidden;
     display: block;
     width: 35px;
   }
-  .container{width: 100%;}
+  .container {
+    width: 100%;
+  }
   nav {
     background: #3c3c3c;
     box-shadow: 0 0 2px #333;
@@ -443,11 +447,11 @@ overflow-y: hidden;
   .cover {
     right: 0;
   }
-  main{
+  main {
     width: calc(100% - 60px);
   }
   .main-width,
-  .main-width_veritical{
+  .main-width_veritical {
     padding-inline: 35px;
   }
 
@@ -476,7 +480,7 @@ overflow-y: hidden;
   }
   .main-width_horizontal {
     padding: 0 0 5px 5px;
-   }
+  }
 
   /* about starts */
   .name {
@@ -486,13 +490,12 @@ overflow-y: hidden;
 
   /* about ends */
 }
-  @media only screen and (max-width: 540px) {
-
+@media only screen and (max-width: 540px) {
   .main_img_vertical {
     width: 100%;
   }
   .main-width,
-  .main-width_veritical{
+  .main-width_veritical {
     padding-inline: 15px;
   }
   .foot_div {
@@ -509,31 +512,24 @@ overflow-y: hidden;
 
   /* about starts */
 
- 
- 
-
   .about_paragraf {
     text-align: right;
   }
   h3 {
     font-size: 2rem;
     padding-block: 20px;
-
   }
-  h6{
-    font-size: .9rem;
+  h6 {
+    font-size: 0.9rem;
   }
-    /* about ends */
-
+  /* about ends */
 }
 @media only screen and (max-width: 400px) {
   h3 {
     font-size: 1.4rem;
     padding-block: 10px;
-
   }
-  h6{
-    font-size: .7rem;
+  h6 {
+    font-size: 0.7rem;
   }
 }
-
