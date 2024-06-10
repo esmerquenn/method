@@ -6,13 +6,19 @@
     <title>method</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/font.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <header class="container">
+  <body class="contact_page">
+    <div class="container flex_container">
       <nav onclick="toggle()">
-        <div  class="nav_menu">
+        <div class="nav_menu">
           <div class="logos">
             <a class="logo" href="/"><img src="img/MethGdd.png" alt="" /></a>
             <a class="logo_mobile" href="#"><img src="img/İCON/hamburger.png" alt="" /></a>
@@ -28,32 +34,33 @@
           </div>
         </div>
       </nav>
-    </header>
-    <div onclick="toggle()" class="blur_div"></div>
-    <main class="container">
-      <section class="main-width form_width">
-        <form class="contact_form" action="">
-          <span>
-            <label for="ad">Name</label>
-            <input id="ad" required placeholder="enter your name" type="text" />
-          </span>
-          <span>
-            <label for="mail">Mail</label>
-            <input id="mail" required placeholder="enter your mail" type="text" />
-          </span>
-          <span>
-            <label for="phone">Phone</label>
-            <input id="phone" required placeholder="enter your phone" type="text" />
-          </span>
-          <span>
-            <label for="message"> message</label>
-            <input id="message" required placeholder="enter your message" type="text" />
-          </span>
 
-          <button class="contact_button">Send Request <i>&rarr;</i></button>
-        </form>
-      </section>
-    </main>
+      <div onclick="toggle()" class="blur_div"></div>
+      <main class="contact_main">
+        <section class="main-width form_width">
+          <form class="contact_form" action="">
+            <span>
+              <label for="ad">Name</label>
+              <input id="ad" required placeholder="enter your name" type="text" />
+            </span>
+            <span>
+              <label for="mail">Mail</label>
+              <input id="mail" required placeholder="enter your mail" type="text" />
+            </span>
+            <span>
+              <label for="phone">Phone</label>
+              <input id="phone" required placeholder="enter your phone" type="text" />
+            </span>
+            <span>
+              <label for="message"> message</label>
+              <input id="message" required placeholder="enter your message" type="text" />
+            </span>
+
+            <button class="contact_button">Send Request</button>
+          </form>
+        </section>
+      </main>
+    </div>
     <footer class="container">
       <div class="foot_div">
         <div class="foot">
